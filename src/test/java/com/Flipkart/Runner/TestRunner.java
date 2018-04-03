@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="features",
 		glue={"stepDefination"},
-		plugin={"html:target/cucumber-html-report","json:target/cucumber.json","pretty:target/cucumber-pretty.txt","usage:target/cucumber-usage.json"})
+		plugin={"html:target/FlipkartNormal-html-report","json:target/cucumber.json","pretty:target/cucumber-pretty.txt","usage:target/cucumber-usage.json"})
 
         //  tags="~@blocked",
 
