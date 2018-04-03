@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features="features",
-		glue={"stepDefination"},
+		glue={"stepDefinition"},
 		plugin={"html:target/FlipkartNormal-html-report","json:target/cucumber.json","pretty:target/cucumber-pretty.txt","usage:target/cucumber-usage.json"})
 
         //  tags="~@blocked",

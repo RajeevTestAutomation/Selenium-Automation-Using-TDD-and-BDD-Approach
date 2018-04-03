@@ -104,8 +104,9 @@ public class VerifyLoginSuccessfullyTest extends AbstractSeleniumClass{
 	 		  
 	}
 
-	@Then("^User should be able to login successfully$")
-	public void user_should_be_able_to_login_successfully() throws Throwable {
+	@Then("^User should able to login successfully$")
+	public void user_should_able_to_login_successfully() throws Throwable {
+	    
 		Thread.sleep(5000);
 		String SignText=driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/span[2]/span")).getText();
 		
@@ -121,10 +122,7 @@ public class VerifyLoginSuccessfullyTest extends AbstractSeleniumClass{
 	//	selenium.QuitBrowser();
 		
 	   driver.quit();
-	   
-	   
 	}
-	
 	
 	/*
 	@After("@selenium")
