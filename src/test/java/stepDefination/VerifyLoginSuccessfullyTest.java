@@ -68,12 +68,12 @@ public class VerifyLoginSuccessfullyTest extends AbstractSeleniumClass{
 		//selenium.OpenBrowser(browser);
 		//selenium.NavigateUrl(url);
 		
-		driver.get("https://login.yahoo.com/config/login?.src=fpctx&.intl=za&.lang=en-ZA&.done=https%3A%2F%2Fza.yahoo.com");
+		driver.get("https://www.flipkart.com/?affid=clickonikfk&affExtParam1=1000&affExtParam2=10279f9d11b3f0aee2869b5e0e357a");
 		//driver.get(URL);
 		String title_text=driver.getTitle();
 		
 		System.out.println(title_text);
-		 	 Thread.sleep(5000);
+		 	 Thread.sleep(2000);
 	   
 	}
 
@@ -81,31 +81,23 @@ public class VerifyLoginSuccessfullyTest extends AbstractSeleniumClass{
 	public void i_entered_valid_user_name_and_valid_password(String userid, String password) throws Throwable {
 		
 		
-		 driver.findElement(By.id(".//*[@id='login-username']")).clear();
+		 driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input")).clear();
 	 	       Thread.sleep(2000);
 	 	           
-	 	        driver.findElement(By.id(".//*[@id='login-username']")).sendKeys(userid);
+	 	        driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input")).sendKeys(userid);
 	 	        
-	 	        // unchecked staysigned in:
-	 	        
-	 	        driver.findElement(By.xpath(".//*[@id='login-username-form']/p[2]/span[1]/label")).click();
-	 	        
-          // Click next in:
-	 	        
-	 	        driver.findElement(By.xpath(".//*[@id='login-signin']")).click();
-	 	        
-	 	    Thread.sleep(2000);
+	 	               
 	 	    
-	 	        driver.findElement(By.id(".//*[@id='login-passwd']")).clear();
+	 	        driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input")).clear();
 		 	   
 	 	      Thread.sleep(2000);
 	 	    
-	 	      driver.findElement(By.id(".//*[@id='login-passwd']")).sendKeys(password);
+	 	      driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input")).sendKeys(password);
 	 	     Thread.sleep(2000);
 	 	     
 	 	     // Click on Sign in
 	 	     
-	 	    driver.findElement(By.xpath(".//*[@id='login-signin']")).click();
+	 	    driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]/div/form/div[3]/button")).click();
 	 		     
 	 		     Thread.sleep(2000);
 	   
@@ -115,9 +107,9 @@ public class VerifyLoginSuccessfullyTest extends AbstractSeleniumClass{
 	@Then("^User should be able to login successfully$")
 	public void user_should_be_able_to_login_successfully() throws Throwable {
 		Thread.sleep(5000);
-		String SignText=driver.findElement(By.xpath(".//*[@id='yui_3_18_0_3_1522414212663_1043']")).getText();
+		String SignText=driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/span[2]/span")).getText();
 		
-		assertEquals("Rajeev", SignText);
+		assertEquals("Please enter valid Email ID/Mobile number", SignText);
 						
 		
 		

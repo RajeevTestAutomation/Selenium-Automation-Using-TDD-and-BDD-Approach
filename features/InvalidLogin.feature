@@ -1,4 +1,4 @@
-Feature: Test  Yahoo smoke scenario
+Feature: Test  Flipkart smoke scenario
 
  Scenario Outline: Test login with Invalid credentials
  Given Open firefox and start application

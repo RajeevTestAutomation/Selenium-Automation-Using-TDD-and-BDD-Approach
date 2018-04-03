@@ -1,4 +1,4 @@
-package com.yahoo.Runner;
+package com.Flipkart.Runner;
 
 import org.junit.runner.RunWith;
 
